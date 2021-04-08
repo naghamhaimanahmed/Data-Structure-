@@ -1,0 +1,17 @@
+#include<iostream>
+using namespace std;
+class Node {
+public:
+    string data;
+	Node* next;
+};
+int main() {
+	Node* first = new Node();
+	Node*second=new Node();
+	first->data = "Nagham";
+	first->next=second;
+	second->data="Haiman";
+	cout << first->data << endl;
+   cout << first->next->data<< endl;
+	return 0;
+}
