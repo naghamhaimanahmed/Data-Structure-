@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+#define size 10
+class stack {
+public:
+    int top;
+    int data[size];
+public:
+    stack()
+    {
+        top = -1;
+    }
+    void push(int n) {
+        if (top == size - 1) {
+            cout << "stack is full\n";
+        }
+        else {
+            top++;
+            data[top] = n;
+        }
+    }
+        void pop() {
+            if (top == -1) {
+                cout << "stack is empty\n";
+            }
+            else {
+                top--;
+            }
+        }
+        void show() {
+            for (int i = 0;i <= top;i++) {
+                cout << data[i] << endl;
+            }
+
+
+        
+        }
+    };
+
+    int main() {
+        stack s;
+        s.push(15);
+        s.push(20);
+        s.pop();
+        s.show();
+        return 0;
+    }
